@@ -45,7 +45,13 @@ const Index = () => {
                         >
                             Encontrar Diarista
                         </RoundedButtonStyled>
-                        <RoundedButtonStyled mode={'contained'} fullWidth>
+                        <RoundedButtonStyled
+                            mode={'contained'}
+                            fullWidth
+                            onPress={() =>
+                                navigation.navigate('CadastroDiarista')
+                            }
+                        >
                             Ser Diarista
                         </RoundedButtonStyled>
                     </RegisterButtonsContainer>

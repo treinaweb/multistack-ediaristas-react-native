@@ -13,3 +13,4 @@
 | [Download](https://github.com/treinaweb/multistack-ediaristas-react-native/archive/05.zip) | 05     | Contratação de Diaristas        |
 | [Download](https://github.com/treinaweb/multistack-ediaristas-react-native/archive/06.zip) | 06     | Roteamento e Login        |
 | [Download](https://github.com/treinaweb/multistack-ediaristas-react-native/archive/07.zip) | 07     | Diárias        |
+| [Download](https://github.com/treinaweb/multistack-ediaristas-react-native/archive/08.zip) | 08     | Cadastro de Diaristas        |
