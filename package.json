@@ -40,7 +40,9 @@
     "swr": "^1.1.0",
     "uuid": "^3.4.0",
     "yup": "^0.32.11",
-    "expo-location": "~13.0.4"
+    "expo-location": "~13.0.4",
+    "@react-native-async-storage/async-storage": "~1.15.0",
+    "expo-image-picker": "~11.0.3"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
