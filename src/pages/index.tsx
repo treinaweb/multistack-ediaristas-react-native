@@ -51,7 +51,10 @@ const Index = () => {
                     </RegisterButtonsContainer>
                 </RegisterContainer>
                 <LoginContainer>
-                    <RoundedButtonLogin fullWidth>
+                    <RoundedButtonLogin
+                        onPress={() => navigation.navigate('Login')}
+                        fullWidth
+                    >
                         Já possuo uma conta
                     </RoundedButtonLogin>
                 </LoginContainer>

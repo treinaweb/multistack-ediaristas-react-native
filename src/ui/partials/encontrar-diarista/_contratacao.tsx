@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useContext, useEffect, useRef, useState } from 'react';
 import { ScrollView, Text, View } from 'react-native';
 import useContratacao from 'data/hooks/pages/useContratacao.page';
 import Breadcrumb from 'ui/components/navigation/Breadcrumb/Breadcrumb';
@@ -20,6 +20,8 @@ import Button from 'ui/components/inputs/Button/Button';
 import { MobileViewService } from 'data/services/MobileViewService';
 import DataList from 'ui/components/data-display/DataList/DataList';
 import { TextFormatService } from 'data/services/TextFormatService';
+import { UserContext } from 'data/contexts/UserContext';
+import { ForceUserState } from 'data/@types/UserInterface';
 
 interface ContratacaoProps {
     onDone: () => void;
@@ -44,13 +46,31 @@ const Contratacao: React.FC<ContratacaoProps> = ({ onDone }) => {
             onPaymentFormSubmit,
             podemosAtender,
         } = useContratacao(),
-        dataAtendimento = serviceForm.watch('faxina.data_atendimento', '');
+        dataAtendimento = serviceForm.watch('faxina.data_atendimento', ''),
+        { userState, userDispatch } = useContext(UserContext);
 
     useEffect(() => {
         setTimeout(() => {
             MobileViewService.scrollToTop(scrollViewRef.current);
         }, 100);
     }, [step]);
+
+    useEffect(() => {
+        if (!userState.user.nome_completo) {
+            userDispatch({
+                type: 'SET_FORCE_USER_STATE',
+                payload: ForceUserState.unauthenticated,
+            });
+        }
+    }, []);
+
+    function handleOnDone() {
+        userDispatch({
+            type: 'SET_FORCE_USER_STATE',
+            payload: ForceUserState.none,
+        });
+        onDone();
+    }
 
     if (!servicos || servicos.length < 1) {
         return (
@@ -165,7 +185,7 @@ const Contratacao: React.FC<ContratacaoProps> = ({ onDone }) => {
                                 color={colors.accent}
                                 style={{ marginTop: 40 }}
                                 fullWidth
-                                onPress={onDone}
+                                onPress={handleOnDone}
                             >
                                 Ir para minhas diárias
                             </Button>
