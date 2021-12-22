@@ -15,16 +15,19 @@ const EncontrarDiaristas: React.FC = () => {
     const navigation = useNavigation<NavigationProp>();
     const { podeContratar, setPodeContratar } = useEncontrarDiarista();
 
+    function onDone() {
+        // navigation.navigate('')
+    }
+
     return (
         <>
-            <Contratacao />
-            {/* {!podeContratar ? (
+            {!podeContratar ? (
                 <VerificarProfissionais
                     onContratarProfissional={() => setPodeContratar(true)}
                 />
             ) : (
-                <Contratacao />
-            )} */}
+                <Contratacao onDone={onDone} />
+            )}
         </>
     );
 };
