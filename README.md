@@ -16,3 +16,4 @@
 | [Download](https://github.com/treinaweb/multistack-ediaristas-react-native/archive/08.zip) | 08     | Cadastro de Diaristas        |
 | [Download](https://github.com/treinaweb/multistack-ediaristas-react-native/archive/09.zip) | 09     | Lista de Pagamentos        |
 | [Download](https://github.com/treinaweb/multistack-ediaristas-react-native/archive/10.zip) | 10     | Lista de Oportunidades        |
+| [Download](https://github.com/treinaweb/multistack-ediaristas-react-native/archive/11.zip) | 11     | Alteração de Dados        |

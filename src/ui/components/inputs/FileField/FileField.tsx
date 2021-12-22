@@ -5,11 +5,11 @@ import { Avatar } from 'react-native-paper';
 import Button from '../Button/Button';
 import * as ImagePicker from 'expo-image-picker';
 import { ImageInfo } from 'expo-image-picker/build/ImagePicker.types';
-import { FileFileFile } from 'data/@types/FileInterface';
+import { FileFieldFile } from 'data/@types/FileInterface';
 
 export interface FileFieldProps {
     defaultValue?: string;
-    onChange: (file: FileFileFile) => void;
+    onChange: (file: FileFieldFile) => void;
 }
 
 const FileField: React.FC<FileFieldProps> = ({ defaultValue, onChange }) => {
