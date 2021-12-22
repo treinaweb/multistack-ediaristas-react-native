@@ -7,3 +7,4 @@
 |                                                                                     | Branch | Descrição                   |
 | ----------------------------------------------------------------------------------- | ------ | --------------------------- |
 | [Download](https://github.com/treinaweb/multistack-ediaristas-react-native/archive/01.zip) | 01     | Criação do Projeto - React Native com Expo        |
+| [Download](https://github.com/treinaweb/multistack-ediaristas-react-native/archive/02.zip) | 02     | Busca de Diaristas        |
